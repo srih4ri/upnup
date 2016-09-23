@@ -67,4 +67,11 @@ class PhotoUploader < CarrierWave::Uploader::Base
       return img["exif:" + name]
     end
   end
+
+  def save_altitude_in_model
+    model.altitude = altitude_m
+    model.save
+  end
+  
+  process :save_altitude_in_model
 end

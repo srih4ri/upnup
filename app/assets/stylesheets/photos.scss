@@ -1,3 +1,31 @@
 // Place all the styles related to the photos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.photos-index {
+    width: 50%;
+    margin: auto;
+}
+
+.photos-index-photo_container {
+    width: 100%;
+    border: 2px solid #eee;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 2px;
+    img {
+        width: 98%;
+        height: 100%;
+        padding: 7px;
+    }
+}
+
+.photos-index-photo_altitude {
+    font-size: 48px;
+    color: #444;
+    font-family: sans-serif;
+    text-align: right;
+    padding: 2px;
+}
+
+

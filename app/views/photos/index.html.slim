@@ -2,8 +2,8 @@
   - @photos.each do |photo|
     .photos-index-photo_container
       = image_tag photo.photo_url
-    .photos-index-photo_altitude
-      = photo.altitude
+      .photos-index-photo_altitude
+        = "#{photo.altitude}m "
 
 .photos-index_upload_photo_message
   = link_to "Upload your photo", new_photo_path

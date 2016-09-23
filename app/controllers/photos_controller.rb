@@ -1,7 +1,7 @@
 class PhotosController < ApplicationController
 
   def index
-    @photos = Photo.all.page
+    @photos = Photo.all.order(altitude: :desc).page
   end
 
   def new

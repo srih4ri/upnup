@@ -1,8 +1,10 @@
+require 'carrierwave/processing/mini_magick'
+
 class PhotoUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
+  include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -46,4 +48,23 @@ class PhotoUploader < CarrierWave::Uploader::Base
   #   "something.jpg" if original_filename
   # end
 
+
+  def altitude_m
+    alt = exif_altitude
+    if alt.present?
+      num, den = alt.split('/').map(&:to_i)
+      num/den
+    else
+      0
+    end
+  end
+  def exif_altitude
+    get_exif('GPSAltitude')
+  end
+
+  def get_exif( name )
+    manipulate! do |img|
+      return img["exif:" + name]
+    end
+  end
 end

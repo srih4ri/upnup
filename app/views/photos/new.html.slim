@@ -1,0 +1,6 @@
+= form_for @photo do |form|
+  = debug @photo.errors.messages
+  = form.label :photo
+  = form.file_field :photo
+
+  = form.submit 'Add photo'

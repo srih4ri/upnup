@@ -20,7 +20,15 @@
     }
 }
 
-.photos-index-photo_altitude {
+.photos-index-photo_meta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.photos-index-photo_uploader {
+    order: 1;
     font-size: 48px;
     color: #444;
     font-family: sans-serif;
@@ -28,4 +36,11 @@
     padding: 2px;
 }
 
-
+.photos-index-photo_altitude {
+    order: 2;
+    font-size: 48px;
+    color: #444;
+    font-family: sans-serif;
+    text-align: right;
+    padding: 2px;
+}

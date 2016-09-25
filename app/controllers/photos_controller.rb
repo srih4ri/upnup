@@ -1,5 +1,7 @@
 class PhotosController < ApplicationController
 
+  before_action :authenticate_person!, only: [:new]
+
   def index
     @photos = Photo.all.order(altitude: :desc).page
   end
@@ -10,7 +12,7 @@ class PhotosController < ApplicationController
 
   def create
     @photo = Photo.new(photo_params)
-    @photo.person = Person.srihari
+    @photo.person = current_person
     if @photo.save
       flash[:message] = "Your photo was added!"
       redirect_to photos_path

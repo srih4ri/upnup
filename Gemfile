@@ -36,6 +36,7 @@ gem 'kaminari'
 gem 'sidekiq'
 gem 'mini_magick'
 gem 'devise'
+gem "fog-aws"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

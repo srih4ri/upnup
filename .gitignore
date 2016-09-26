@@ -19,3 +19,4 @@ public/uploads
 
 .rbenv-vars
 .powenv
+.DS_Store

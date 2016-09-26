@@ -25,3 +25,4 @@ en:
   errors:
     messages:
       mini_magick_processing_error: "Minimagick processing failed: %{e}"
+      not_saved: 'Fix these errors to continue'

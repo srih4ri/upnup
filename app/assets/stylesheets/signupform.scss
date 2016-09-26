@@ -1,0 +1,51 @@
+$primary-bg-color: #fff;
+$primary-text-color: #D35400;
+$secondary-text-color: #7A3100;
+$secondary-bg-color: #FFB685;
+$base-font: 'Helvetica Neue';
+
+.signupform {
+    margin: auto;
+    width: 33%;
+}
+
+.signupform-title {
+    color: $primary-text-color;
+    font-family: $base-font;
+    font-size: 36px;
+    padding: 0em 1.2em;
+}
+.signupform-field {
+    padding: 1em;
+    margin: 2em;
+}
+.signupform-textinput {
+    height: 3em;
+    font-size: 1.2em;
+    width: 100%;
+    padding: 0.2em;
+}
+
+.signupform-btn {
+    background: $secondary-bg-color;
+    color: $secondary-text-color;
+    width: 8em;
+    height: 2em;
+    border: 0px;
+    font-size: 36px;
+}
+
+.signupform-actions {
+    margin: 2em;
+    text-align: center;
+}
+
+.formerrors {
+    font-size: 18px;
+    padding: 0em 2.4em;
+    color: $primary-text-color;
+}
+
+.formerrors-messages {
+    padding: 0.1em;
+}
